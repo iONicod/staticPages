@@ -1,0 +1,549 @@
+/*Dev*/
+/*div {*/
+/*    outline: blue 1px solid;*/
+/*}*/
+
+/*.bg_ideal {*/
+/*    position: fixed;*/
+/*    background-image: url('assets/bg_main_page.png');*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 100% 100%;*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    z-index: 10;*/
+/*    opacity: 0.5;*/
+/*}*/
+
+/*Dev*/
+
+
+
+
+/*App*/
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 100;
+
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Roboto"),
+    url("../fonts/Roboto/Roboto-Thin.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+
+    src: local("Roboto"),
+    url("../fonts/Roboto/Roboto-Regular.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Roboto"),
+    url("../fonts/Roboto/Roboto-Medium.woff") format("woff")
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    font-size: 22px;
+}
+
+/*App*/
+
+
+/*!*LoadingScreen*!*/
+.loading_screen {
+    position: fixed;
+    background-image: url('assets/decor/logo.svg');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 130px;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+/*!*LoadingScreen*!*/
+
+
+
+/*!*LoginPage*!*/
+.background {
+    position: fixed;
+    background-image: url('assets/decor/background-login.svg');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    display: block;
+}
+
+.action_panel {
+    display: flex;
+    padding: 70px 20px 20px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    width:400px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/*!*LoginPage*!*/
+
+
+/*!*!*ChooseAuthPage*!*!*/
+.app_name {
+    font-size: 56px;
+    color: #0789F3;
+
+    margin-top: 12px;
+}
+
+.quote {
+    margin-top: 8px;
+    font-size: 21px;
+    color: #606060;
+}
+
+.buttons_wrap {
+    margin-top: 70px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+
+button {
+    display: block;
+    width: 100%;
+    height: 55px;
+
+    margin-top: 25px;
+
+    font-size: 18px;
+    border: none;
+    letter-spacing: 0.04em;
+
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/*!*!*ChooseAuthPage*!*!*/
+
+
+/*!*GreenButton*!*/
+.green_button {
+    background: linear-gradient(0deg, #44D597 25.8%, #FFFFFF 324.4%);
+    color: white;
+}
+/*!*GreenButton*!*/
+
+/*!*!*BlueBorderButton*!*!*/
+.blue_border_button {
+    border: 3px solid #0586F7 !important;
+    color: #0586F7;
+}
+/*!*!*BlueBorderButton*!*!*/
+
+
+/*!*!*GoogleButton*!*!*/
+.google_button {
+    color: #606060;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    background-image: url("assets/decor/new-google-favicon.svg");
+    background-repeat: no-repeat;
+    background-size: 35px;
+    background-position: 45px;
+}
+/*!*!*GoogleButton*!*!*/
+
+
+
+
+/*!*RegistrationPanel*!*/
+
+.registrationButton {
+    width: 90%;
+}
+
+/*    !*BlueButton*!*/
+.blue_button {
+    background: linear-gradient(0deg, #0586F7 25.8%, #FFFFFF 324.4%);
+    color: white;
+}
+/*    !*BlueButton*!*/
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 43px 20px 43px 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: url("assets/decor/back.svg");
+    background-repeat: no-repeat;
+    background-size: 13px;
+    background-position: 6px 47px;
+
+}
+.action {
+display: inline-block;
+padding-left: 30px;
+cursor: pointer;
+font-size: 26px;
+color: #0789F3;
+}
+.type {
+display: inline-block;
+font-size: 25px;
+font-style: normal;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0;
+text-align: right;
+}
+
+.content {
+    height: 300px;
+    width: 100%;
+}
+
+.field {
+margin: 30px 20px;
+}
+
+label {
+color: #888888;
+}
+
+input[type="text"],
+input[type="password"] {
+display: block;
+box-sizing: border-box;
+margin-top: 15px;
+width: 100%;
+background-color: rgba(255, 255, 255, 0.05);
+border: none;
+border-bottom: 2px solid #DDDDDD;
+letter-spacing: 0.04em;
+padding: 12px 5px;
+font-size: 25px;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+outline: none;
+border-bottom: 2px solid #0789F3;
+}
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+color: #DDDDDD;
+font-size: 25px;
+}
+
+.agreement {
+width: 70%;
+margin: 100px auto 0;
+font-size: 14px;
+line-height: 20px;
+text-align: center;
+}
+span {
+color: #0789F3;
+}
+.additionalAction {
+margin-top: 35px;
+font-size: 18px;
+cursor: pointer;
+}
+.additionalText {
+margin-top: 20px;
+font-size: 18px;
+line-height: 30px;
+color: #888888;
+}
+.resendCode {
+cursor: pointer;
+color: #0789F3;
+font-size: 18px;
+margin-left: 20px;
+}
+
+/*RegistrationPanel*/
+
+/*CheckEmailPanel*/
+.checkEmailIcon {
+    margin-top: 100px;
+}
+.checkEmailText {
+    margin-top: 30px;
+    font-size: 25px;
+}
+.checkEmailAdditional {
+    color: #888888;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/*CheckEmailPanel*/
+
+@media (max-width: 440px) {
+    .action_panel_wrap {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .action_panel {
+        padding-top: 20%;
+        width: 100%;
+    }
+    .google_button {
+        background-position: 25px;
+    }
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder    {
+        color: rgba(0, 0, 0, 0.3);
+    }
+    input[type="text"],
+    input[type="password"] {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .action_panel {
+        padding-top: 0;
+    }
+    .buttons_wrap {
+        padding: 0;
+    }
+    .checkEmailIcon {
+        margin-top: 0;
+
+    }
+}
+
+@media (max-width: 300px), (max-height: 570px) {
+    button {
+        font-size: 14px;
+    }
+    .google_button {
+        background-size: 25px;
+        background-position: 15px;
+    }
+    .app_name {
+        font-size: 30px;
+    }
+    .quote {
+        font-size: 15px;
+    }
+    .buttons_wrap {
+        margin-top: 5%;
+    }
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder,
+    input[type="text"],
+    input[type="password"] {
+        font-size: 16px;
+    }
+
+    .type, .action {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .additionalAction {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}
+
+
+
+/*ExamPage*/
+/*.loginPage {*/
+/*    display: grid;*/
+/*    position: fixed;*/
+/*    grid-template-columns: 400px auto;*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    background-color: #F7F7F7;*/
+/*}*/
+
+/*TasksPanel*/
+/*.tasksWrap {*/
+/*    margin-top: 60px;*/
+/*    margin-left: 90px;*/
+/*    margin-right: 40px;*/
+/*}*/
+/*.tasksLabel {*/
+/*    padding-left: 27px;*/
+/*    margin-bottom: 30px;*/
+/*}*/
+
+/*.tasksElements {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*}*/
+
+/*.task {*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    margin-right: 2px;*/
+/*    margin-left: 10px;*/
+/*    margin-bottom: 20px;*/
+/*    border-radius: 10px;*/
+/*    background-color: white;*/
+/*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.taskChecked {*/
+/*    background-color: #0080FF;*/
+/*    color: white;*/
+/*}*/
+
+/*TasksPanel*/
+
+
+/*QuestionsFeed*/
+/*.feed {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    overflow-y: scroll;*/
+/*    padding-left: 100px;*/
+/*}*/
+
+/*.questionsWrap {*/
+/*    padding-top: 60px;!* Firefox *!*/
+/*    padding-bottom: 100px;*/
+/*}*/
+
+/*.question {*/
+/*    position: relative;*/
+/*    background-color: white;*/
+/*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);*/
+/*    width: 655px;*/
+/*    margin-bottom: 30px;*/
+/*    padding-bottom: 40px;*/
+/*    border-radius: 15px;*/
+/*}*/
+/*.questionNumber {*/
+/*    display: flex;*/
+/*    position: absolute;*/
+/*    top: 40px;*/
+/*    left: 28px;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    width: 45px;*/
+/*    height: 45px;*/
+/*    border-radius: 45px;*/
+/*    background-color: #0BB3E7;*/
+/*    color: white;*/
+/*}*/
+/*.questionText {*/
+/*    padding-top: 50px;*/
+/*    margin-left: 105px;*/
+/*    margin-right: 30px;*/
+/*    line-height: 30px;*/
+/*}*/
+/*.emptySpace {*/
+/*    color: black;*/
+/*    letter-spacing: 0;*/
+/*}*/
+/*.variants {*/
+/*    margin-top: 35px;*/
+/*    margin-left: 115px;*/
+/*    margin-right: 42px;*/
+/*}*/
+/*.variant {*/
+/*    position: relative;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    padding-bottom: 20px;*/
+/*}*/
+/*.letter {*/
+/*    display: inline-block;*/
+/*}*/
+/*.answerField {*/
+/*    top: 0;*/
+/*    left: 40px;*/
+/*    display: flex;*/
+/*    padding: 15px 25px;*/
+/*    margin-left: 28px;*/
+/*    background: #F9F9F9;*/
+/*    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);*/
+/*    border-radius: 10px;*/
+/*    width: 100%;*/
+/*    cursor: pointer;*/
+/*}*/
+/*.answerFieldChecked {*/
+/*    background: #0080FF;*/
+/*    color: white;*/
+/*}*/
+
+
+/*AudioQuestion*/
+/*.audioWrap {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    margin-top: 30px;*/
+/*    margin-left: 74px;*/
+/*    margin-bottom: 15px;*/
+/*    margin-right: 30px;*/
+/*    height: 55px;*/
+/*    background-color: #F9F9F9;*/
+/*    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);*/
+/*    border-radius: 30px;*/
+/*}*/
+/*.audioButton {*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 43px 43px;*/
+/*    width: 43px;*/
+/*    height: 43px;*/
+/*    cursor: pointer;*/
+/*    margin-left: 15px;*/
+/*}*/
+/*.audioButtonPlay {*/
+/*    background-image: url("assets/decor/play.svg");*/
+/*}*/
+/*.audioButtonPause {*/
+/*    background-image: url("assets/decor/pause.svg");*/
+/*}*/
+/*.progressWrap {*/
+/*    width: 83%;*/
+/*    height: 5px;*/
+/*    margin-left: 15px;*/
+/*    border-radius: 10px;*/
+/*    background-color: #DDDDDD;*/
+/*}*/
+/*.progress {*/
+/*    width: 30%;*/
+/*    height: 100%;*/
+/*    background-color: #EE9B16;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+
+/*AudioQuestion*/
+
+/*QuestionsFeed*/
+
+/*ExamPage*/
+
+
+
